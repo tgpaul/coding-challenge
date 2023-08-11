@@ -31,3 +31,10 @@ class Restaurant(models.Model):
     rating_color = models.CharField(max_length=255)
     rating_text = models.CharField(max_length=255)
     votes = models.CharField(max_length=255)
+
+class User(models.Model):
+    user_name = models.CharField(max_length=255)
+    user_country_name = models.CharField(max_length=255)
+    user_city_name = models.CharField(max_length=255)
+    user_country_code = models.CharField(max_length=255)
+    user_city_code = models.CharField(max_length=255)

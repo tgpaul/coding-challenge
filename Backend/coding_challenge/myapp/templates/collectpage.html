@@ -3,15 +3,18 @@
 <body>
 
 <h1>Collect Data</h1>
-<form>
-    <label for="user_name">Enter user name:</label><br>
-    <input type="text" id="user_name" name="user_name"><br>
-    <label for="user_country_name">Enter country name:</label><br>
-    <input type="text" id="user_country_name" name="user_country_name"><br>
-    <label for="user_city_name">Enter city name:</label><br>
-    <input type="text" id="user_city_name" name="user_city_name">
-    <input type="submit" value="Submit">
+<form method="post">
+    {%csrf_token%}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
 </form> 
 
+<!-- <label for="user_name">Enter user name:</label><br>
+<input type="text" id="user_name" name="user_name"><br>
+<label for="user_country_name">Enter country name:</label><br>
+<input type="text" id="user_country_name" name="user_country_name"><br>
+<label for="user_city_name">Enter city name:</label><br>
+<input type="text" id="user_city_name" name="user_city_name">
+<input type="submit" value="Submit"> -->
 </body>
 </html>
