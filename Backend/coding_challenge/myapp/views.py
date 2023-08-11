@@ -38,18 +38,24 @@ def collectPage(request):
 def restaurantList(request):
 
   user = User.objects.last()
-  countries = Country.objects.filter(country_name = user.user_country_name).values()
-  cities = City.objects.all().values()
+  country = user.user_country_name
+  city = user.user_city_name
+  valid_country = Country.objects.filter(country_name = country).values()
+  valid_city = City.objects.filter(city_name = city).values()
 
-  print("USER")
-  print(user.user_country_name)
+  # print("USER")
+  # print(user.user_country_name)
   print("CITIES")
-  print(cities)
+  print(valid_city)
   print("COUNTRY")
-  print(countries)
+  print(valid_country)
   
+  context = {
+    'country': valid_country,
+    'city': valid_city
+  }
 
 
-  template = loader.get_template('homepage.html')
-  return HttpResponse(template.render())    
+  template = loader.get_template('restaurantlist.html')
+  return HttpResponse(template.render(context, request))    
 
