@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>List of Restaurants</h1>
+  
+<ul>
+  {% for x in restaurants %}
+    <li>{{x.restaurant_id}}
+{{x.restaurant_name}}
+{{x.country_code}}
+{{x.city_code}}
+{{x.address}}
+{{x.locality}}
+{{x.locality_verbose}}
+{{x.ongitude}}
+{{x.latitude}}
+{{x.cuisines}}
+{{x.average_cost_for_two}}
+{{x.currency}}
+{{x.has_table_booking}}
+{{x.has_Online_delivery}}
+{{x.is_delivering_now}}
+{{x.switch_to_order_menu}}
+{{x.price_range}}
+{{x.aggregate_rating}}
+{{x.rating_color}}
+{{x.rating_text}}
+{{x.votes}}
+</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Members</h1>
+  
+<ul>
+  {% for x in cities %}
+    <li>{{ x.city_code }} {{ x.city_name }}</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
